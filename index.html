@@ -1,262 +1,373 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Ayaan Faisal — Portfolio</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ayaan Faisal — Portfolio</title>
 
-    <!-- Devicon (for icons) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet" />
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body id="top">
-    <!-- Glass Header -->
-    <header class="glass-header" aria-label="Primary">
-      <a class="brand-link nav-link" href="#top">
-        <span class="nav-fx">
-          <span class="nav-shine">Ayaan&nbsp;Faisal</span>
-          <span class="nav-solid">Ayaan&nbsp;Faisal</span>
-        </span>
+  <!-- Devicon (for icons) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body id="top">
+  <!-- Glass Header -->
+  <header class="glass-header" aria-label="Primary">
+    <a class="brand-link nav-link" href="#top">
+      <span class="nav-fx">
+        <span class="nav-shine">Ayaan&nbsp;Faisal</span>
+        <span class="nav-solid">Ayaan&nbsp;Faisal</span>
+      </span>
+    </a>
+
+    <nav class="site-nav">
+      <a class="nav-link" href="#about">
+        <span class="nav-fx"><span class="nav-shine">About&nbsp;Me</span><span
+            class="nav-solid">About&nbsp;Me</span></span>
       </a>
+      <a class="nav-link" href="#work">
+        <span class="nav-fx"><span class="nav-shine">My&nbsp;Work</span><span
+            class="nav-solid">My&nbsp;Work</span></span>
+      </a>
+      <a class="nav-link" href="#experience">
+        <span class="nav-fx"><span class="nav-shine">Experience</span><span class="nav-solid">Experience</span></span>
+      </a>
+      <a class="nav-link" href="#contact">
+        <span class="nav-fx"><span class="nav-shine">Contact</span><span class="nav-solid">Contact</span></span>
+      </a>
+    </nav>
+  </header>
 
-      <nav class="site-nav">
-        <a class="nav-link" href="#about">
-          <span class="nav-fx"><span class="nav-shine">About&nbsp;Me</span><span class="nav-solid">About&nbsp;Me</span></span>
-        </a>
-        <a class="nav-link" href="#work">
-          <span class="nav-fx"><span class="nav-shine">My&nbsp;Work</span><span class="nav-solid">My&nbsp;Work</span></span>
-        </a>
-        <a class="nav-link" href="#experience">
-          <span class="nav-fx"><span class="nav-shine">Experience</span><span class="nav-solid">Experience</span></span>
-        </a>
-        <a class="nav-link" href="#contact">
-          <span class="nav-fx"><span class="nav-shine">Contact</span><span class="nav-solid">Contact</span></span>
-        </a>
-      </nav>
-    </header>
+  <!-- Global sweeps -->
+  <div class="sweep sweep-a" aria-hidden="true"></div>
+  <div class="sweep sweep-b" aria-hidden="true"></div>
 
-    <!-- Global sweeps -->
-    <div class="sweep sweep-a" aria-hidden="true"></div>
-    <div class="sweep sweep-b" aria-hidden="true"></div>
+  <!-- Veil + particle web -->
+  <div class="bg-veil" aria-hidden="true"></div>
+  <canvas id="web" aria-hidden="true"></canvas>
 
-    <!-- Veil + particle web -->
-    <div class="bg-veil" aria-hidden="true"></div>
-    <canvas id="web" aria-hidden="true"></canvas>
+  <!-- ===== HERO ===== -->
+  <main class="hero">
+    <div class="grid">
+      <section class="left">
+        <div class="brand-lockup">
+          <span class="tag">portfolio</span>
 
-    <!-- ===== HERO ===== -->
-    <main class="hero">
-      <div class="grid">
-        <section class="left">
-          <div class="brand-lockup">
-            <span class="tag">portfolio</span>
-
-            <h1 class="headline" aria-label="Hey, I’m Ayaan Faisal">
-              <span class="fx">
-                <span class="shine" aria-hidden="true">
-                  Hey, I’m <span class="accent">Ayaan&nbsp;Faisal</span>
-                </span>
-                <span class="solid" aria-hidden="true">
-                  Hey, I’m <span class="accent">Ayaan&nbsp;Faisal</span>
-                </span>
+          <h1 class="headline" aria-label="Hey, I’m Ayaan Faisal">
+            <span class="fx">
+              <span class="shine" aria-hidden="true">
+                Hey, I’m <span class="accent">Ayaan&nbsp;Faisal</span>
               </span>
-            </h1>
+              <span class="solid" aria-hidden="true">
+                Hey, I’m <span class="accent">Ayaan&nbsp;Faisal</span>
+              </span>
+            </span>
+          </h1>
 
-            <p class="sub">
-              Student focused on software development, machine learning / AI, and finance —
-              exploring how efficient engineering meets real-world impact.
-            </p>
+          <p class="sub">
+            I like building things and making predictions; <br>
+            Check out how I've applied my many interests by developing tools
+            with the intent to solve real problems ⬇
+          </p>
+          <div class="social-links">
+            <a class="nav-link social-bubble" href="https://github.com/AyaanFaisal21" target="_blank"
+              aria-label="GitHub">
+              <i class="devicon-github-original"></i>
+            </a>
+            <a class="nav-link social-bubble" href="https://www.linkedin.com/in/ayaan--faisal/" target="_blank"
+              aria-label="LinkedIn">
+              <i class="devicon-linkedin-plain"></i>
+            </a>
+            <a class="nav-link social-bubble resume" href="Ayaan_Faisal_Resume.pdf" target="_blank" aria-label="Resume">
+              <span>Resume</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                style="margin-left:6px;">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
           </div>
-        </section>
-
-        <aside class="right">
-          <div class="portrait-wrap">
-            <div class="portrait">
-              <img
-                src="Picture.jpg"
-                alt="Ayaan Faisal portrait"
-                class="portrait__img"
-                style="--crop-x: 50%; --crop-y: 35%; --crop-scale: 1.15;"
-              />
-            </div>
-          </div>
-        </aside>
-      </div>
-
-      <div class="hero-sentinel" aria-hidden="true"></div>
-    </main>
-
-    <!-- ===== ABOUT ===== -->
-    <section class="about" id="about" aria-label="About Me">
-      <div class="container about-wrap">
-        <h2 class="section-bubble about-header">About Me</h2>
-
-        <div class="about-grid" id="about-grid">
-          <!-- Left chip column -->
-          <ul class="tools-list left-tools" aria-label="Tech tools (left)">
-            </ul>
-
-          <!-- Center about bubble -->
-          <div class="about-bubble" id="about-bubble">
-            <div class="bubble-shine" aria-hidden="true"></div>
-            <p class="about-text">
-              For as long as I can remember, I've loved building things and seeing them work; software engineering lets me pursue that passion with little resources and easy-to-implement iterations. As I've grown up, I've taken a keen interest in financial markets and the movement of money in tandem with predictive models and machine learning as they've steadily taken center stage in the tech world: that's why I pursue Computer Science, Data Science, and Economics, collectively garnering experience in full-stack development, data analysis, and finance applications. I'm quick to learn, a strong collaborator, and motivated to apply problem-solving with modern technology to create valuable products.
-            </p>
-            <p class="about-text">
-              When I build, I like to focus on real problems I've seen or know people deal with. I build with the intent to solve problems and streamline complex workflows, with a particular emphasis on the people involved in my work who'll end up using my product, stemming from my own.
-            </p>
-            <p class="about-cta">Check out some of the work I've done and the story behind these products!</p>
-          </div>
-
-          <!-- Right chip column -->
-          <ul class="tools-list right-tools" aria-label="Tech tools (right)">
-
-          </ul>
         </div>
+      </section>
+
+      <aside class="right">
+        <div class="portrait-wrap">
+          <div class="portrait">
+            <img src=".jpg" alt="Ayaan Faisal portrait" class="portrait__img"
+              style="--crop-x: 50%; --crop-y: 35%; --crop-scale: 1.15;" />
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="hero-sentinel" aria-hidden="true"></div>
+  </main>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about" aria-label="About Me">
+    <div class="container about-wrap">
+      <h2 class="section-bubble about-header">About Me</h2>
+
+      <div class="about-grid" id="about-grid">
+        <!-- Left chip column -->
+        <ul class="tools-list left-tools" aria-label="Tech tools (left)">
+        </ul>
+
+        <!-- Center about bubble -->
+        <div class="about-bubble" id="about-bubble">
+          <div class="bubble-shine" aria-hidden="true"></div>
+          <p class="about-text">
+            I’m apart of the Rutgers University Honors College, and for as long as I can remember, I’ve loved building
+            things and seeing them function. Software engineering offered me a fast, creative, and
+            non-resource-intensive
+            way to do that. <br> I study Computer Science, Data Science, and Economics because I’m interested in how
+            machine
+            learning can solve real problems, and how those solutions connect to markets and decision-making. I’ve
+            gained
+            experience across full-stack development, data analysis, and finance-focused projects.
+          </p>
+          <p class="about-text">
+            When I build, I start with problems I’ve seen firsthand and design with the people using the product in
+            mind: users, customers, and teammates. I learn quickly, collaborate well, and love turning ideas into tools
+            that actually get used.
+          </p>
+          <p class="about-cta">Check out some of the work I've done and the story behind these products!</p>
+        </div>
+
+        <!-- Right chip column -->
+        <ul class="tools-list right-tools" aria-label="Tech tools (right)">
+
+        </ul>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ===== PROJECTS ===== -->
-    <section class="projects" id="work" aria-label="Projects">
-      <div class="projects-inner centered">
-        <main class="projects-col">
-          <h2 class="section-bubble section-center">My Projects</h2>
+  <!-- ===== PROJECTS ===== -->
+  <section class="projects" id="work" aria-label="Projects">
+    <div class="projects-inner centered">
+      <main class="projects-col">
+        <h2 class="section-bubble section-center">My Projects</h2>
 
-          <article class="project">
-            <div class="flip-card" aria-label="Project card 1">
-              <div class="flip-inner">
-                <div class="flip-face flip-front">
-                  <div class="project-logo">AF</div>
-                  <h4 class="project-name">Project Alpha</h4>
-                  <p class="project-tag">Full-stack • ML</p>
-                </div>
-                <div class="flip-face flip-back">
-                  <h4>Project Alpha</h4>
-                  <ul class="stack-bullets">
-                    <li>Python</li><li>JavaScript</li><li>PyTorch</li><li>SQL</li>
+        <article class="project">
+          <div class="flip-card" aria-label="Fantok Project Card">
+            <div class="flip-inner">
+              <div class="flip-face flip-front">
+                <div class="project-logo" style="color: white; border-color: rgba(255,255,255,0.4); font-size: 1.8rem;">
+                  📈</div>
+                <h4 class="project-name" style="color: white; font-size: 2.2rem; margin-bottom: 0.5rem;">Fantok</h4>
+                <p class="project-tag" style="margin-bottom: 0.5rem; font-size: 1.1rem; color: white;">Fantasy Football,
+                  but with Stocks!</p>
+                <p class="project-tag" style="font-size: 0.95rem; opacity: 1; color: white; margin-top:0;">React,
+                  FastAPI, PostgreSQL, WebSocket, AsyncIO, Pandas, Alpaca</p>
+              </div>
+              <div class="flip-face flip-back"
+                style="display: flex; flex-direction: column; justify-content: flex-start; padding-top: 16px;">
+                <h4 style="margin: 0 0 10px 0; font-size: 1.8rem;">Fantok</h4>
+                <div class="proj-notes"
+                  style="text-align: center; width: 100%; overflow-y: auto; max-height: 290px; padding-right: 6px; font-size: 0.82rem; margin: 0;">
+                  <p style="margin-bottom: 0.2rem; margin-top: 0;"><strong>Why Fantok?</strong></p>
+                  <p style="margin-top: 0;">We built Fantok because we noticed an increasing curiosity about financial
+                    markets and investing among high schoolers and early college students with no enticing avenue to
+                    explore the aforementioned ideas. With Fantok, we aimed to create a friendly and gamified way to
+                    explore the stock market and create strong portfolios. Check out its features below:</p>
+
+                  <p style="margin-bottom: 0.2rem; margin-top: 0.6rem;"><strong>Features:</strong></p>
+                  <ul style="padding: 0; margin: 0; list-style-position: inside; text-align: center;">
+                    <li style="margin-bottom: 4px;"><strong>Real-time Trading:</strong> Integrates with the Alpaca
+                      Market API to fetch live stock data and execute simulated trades.</li>
+                    <li style="margin-bottom: 4px;"><strong>Fantasy League System:</strong> Users can create or join
+                      leagues, draft stocks in a real-time system, and compete against others.</li>
+                    <li style="margin-bottom: 4px;"><strong>Portfolio Tracking:</strong> Each user receives a virtual
+                      portfolio to track balances, holdings, and historical performance.</li>
+                    <li style="margin-bottom: 4px;"><strong>Weekly Matchups:</strong> Compete head-to-head with other
+                      members in your league based on portfolio growth.</li>
+                    <li style="margin-bottom: 4px;"><strong>Live Leaderboard:</strong> Dynamic leaderboard showing win
+                      rates, game stats, and overall rankings.</li>
+                    <li><strong>Modern UI:</strong> Built with React, TailwindCSS, and responsive design principles for
+                      a clean, mobile-friendly experience.</li>
                   </ul>
-                  <p class="proj-notes">Predictive modeling + sleek UI; fast iteration and clean deployment.</p>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="video-card">
-              <div class="video-aspect">
-                <iframe
-                  src="https://www.youtube.com/embed/VIDEO_ID_1?rel=0"
-                  title="Project Alpha demo"
-                  loading="lazy" allowfullscreen
-                  referrerpolicy="strict-origin-when-cross-origin"></iframe>
-              </div>
-              <div class="video-caption">Demo: Project Alpha</div>
+          <!-- <div class="video-card">
+            <div class="video-aspect">
+              <iframe src="https://www.youtube.com/embed/VIDEO_ID_1?rel=0" title="Fantok Demo" loading="lazy"
+                allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
             </div>
-          </article>
+            <div class="video-caption">Demo: Fantok</div>
+          </div> -->
+        </article>
 
-          <article class="project">
-            <div class="flip-card" aria-label="Project card 2">
-              <div class="flip-inner">
-                <div class="flip-face flip-front">
-                  <div class="project-logo">NN</div>
-                  <h4 class="project-name">Neural Notes</h4>
-                  <p class="project-tag">NLP • UX</p>
-                </div>
-                <div class="flip-face flip-back">
-                  <h4>Neural Notes</h4>
-                  <ul class="stack-bullets">
-                    <li>JavaScript</li><li>Python</li><li>Embeddings</li>
+        <article class="project">
+          <div class="flip-card" aria-label="Skindex Project Card">
+            <div class="flip-inner">
+              <div class="flip-face flip-front">
+                <div class="project-logo"
+                  style="background: linear-gradient(135deg, #ffdac1, #ffb7b2); color: #5d2e2e; border-color: rgba(255,255,255,0.4);">
+                  S</div>
+                <h4 class="project-name" style="color: white; font-size: 2.2rem; margin-bottom: 0.5rem;">Skindex</h4>
+                <p class="project-tag" style="margin-bottom: 0.5rem; font-size: 1.1rem; color: white;">AI-powered skin
+                  lesion classification using deep learning.</p>
+                <p class="project-tag" style="font-size: 0.95rem; opacity: 1; color: white; margin-top:0;">React, Flask,
+                  PyTorch, timm, ONNX Runtime, TensorFlow</p>
+              </div>
+              <div class="flip-face flip-back"
+                style="display: flex; flex-direction: column; justify-content: flex-start; padding-top: 16px;">
+                <h4 style="margin: 0 0 10px 0; font-size: 1.8rem;">Skindex</h4>
+                <div class="proj-notes"
+                  style="text-align: center; width: 100%; overflow-y: auto; max-height: 290px; padding-right: 6px; font-size: 0.82rem; margin: 0;">
+                  <p style="margin-bottom: 0.2rem; margin-top: 0;"><strong>Why Skindex?</strong></p>
+                  <p style="margin-top: 0;">We built Skindex because my team and I could recount the unease associated
+                    with googling our symptoms, but not wanting to invest entirely in a visit to a medical clinic for
+                    mild skin concerns. So, we wanted a way to quell that unease, a way to get guidance about our skin
+                    conditions and whether or not we should commit to the full investment of a doctor's visit. Some
+                    features of the app include:</p>
+
+                  <p style="margin-bottom: 0.2rem; margin-top: 0.6rem;"><strong>Features:</strong></p>
+                  <ul style="padding: 0; margin: 0; list-style-position: inside; text-align: center;">
+                    <li style="margin-bottom: 4px;"><strong>Ensemble AI Inference:</strong> Combines predictions from
+                      TensorFlow-based and PyTorch-based models, transported via ONNX to provide real-time
+                      classification with detailed confidence and agreement metrics.</li>
+                    <li style="margin-bottom: 4px;"><strong>10-Class Detection:</strong> Identifies a wide range of
+                      common skin conditions, from critical issues like Melanoma to common ailments like Eczema and
+                      healthy skin.</li>
+                    <li style="margin-bottom: 4px;"><strong>Actionable Medical Insights:</strong> Maps results to
+                      specific urgency levels (High/Medium/Low) with tailored recommendations to guide user next steps.
+                    </li>
+                    <li style="margin-bottom: 4px;"><strong>Interactive Clinical Assistant:</strong> A smart chatbot
+                      that provides immediate diagnostic criteria, treatment protocols, and medical reference
+                      information based on user queries.</li>
+                    <li style="margin-bottom: 4px;"><strong>Modern React & Flask Architecture:</strong> Allows for image
+                      upload via file upload or camera, features a polished, responsive interface built with React 19
+                      and TailwindCSS, powered by a high-performance Python backend.</li>
+                    <li><strong>Safety-Centric Design:</strong> Prioritizes user safety with clear medical disclaimers
+                      and guardrails, emphasizing that the tool is for informational support, not diagnosis.</li>
                   </ul>
-                  <p class="proj-notes">Semantic search & summarization with a responsive experience.</p>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="video-card">
-              <div class="video-aspect">
-                <iframe
-                  src="https://www.youtube.com/embed/VIDEO_ID_2?rel=0"
-                  title="Neural Notes demo"
-                  loading="lazy" allowfullscreen
-                  referrerpolicy="strict-origin-when-cross-origin"></iframe>
-              </div>
-              <div class="video-caption">Demo: Neural Notes</div>
+          <!-- <div class="video-card">
+            <div class="video-aspect">
+              <iframe src="https://www.youtube.com/embed/VIDEO_ID_2?rel=0" title="Skindex Demo" loading="lazy"
+                allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
             </div>
-          </article>
+            <div class="video-caption">Demo: Skindex</div>
+          </div> -->
+        </article>
 
-          <article class="project">
-            <div class="flip-card" aria-label="Project card 3">
-              <div class="flip-inner">
-                <div class="flip-face flip-front">
-                  <div class="project-logo">FM</div>
-                  <h4 class="project-name">FinModel</h4>
-                  <p class="project-tag">Finance • DS</p>
-                </div>
-                <div class="flip-face flip-back">
-                  <h4>FinModel</h4>
-                  <ul class="stack-bullets">
-                    <li>Python</li><li>R</li><li>SQL</li>
+        <article class="project">
+          <div class="flip-card" aria-label="Car Deal Predictor Project Card">
+            <div class="flip-inner">
+              <div class="flip-face flip-front">
+                <div class="project-logo" style="color: white; border-color: rgba(255,255,255,0.4); font-size: 1.8rem;">
+                  ∑</div>
+                <h4 class="project-name" style="color: white; font-size: 2.2rem; margin-bottom: 0.5rem;">Car Deal
+                  Predictor</h4>
+                <p class="project-tag" style="margin-bottom: 0.5rem; font-size: 1.1rem; color: white;">Tackling
+                  Predictive Modeling With Kaggle Competitions</p>
+                <p class="project-tag" style="font-size: 0.95rem; opacity: 1; color: white; margin-top:0;">R, XGBoost,
+                  Random Forest, Data Cleaning, Ensemble Learning</p>
+              </div>
+              <div class="flip-face flip-back"
+                style="display: flex; flex-direction: column; justify-content: flex-start; padding-top: 16px;">
+                <h4 style="margin: 0 0 10px 0; font-size: 1.8rem;">Car Deal Predictor</h4>
+                <div class="proj-notes"
+                  style="text-align: center; width: 100%; overflow-y: auto; max-height: 290px; padding-right: 6px; font-size: 0.82rem; margin: 0;">
+                  <p style="margin-bottom: 0.2rem; margin-top: 0;"><strong>Why Car Deal Predictor?</strong></p>
+                  <p style="margin-top: 0;">This project was a valuable personal pursuit, allowing me to
+                    explore machine learning principles and some of the fundamentals behind predictive modeling that I
+                    had initially only
+                    explored through classwork.</p>
+
+                  <p style="margin-bottom: 0.2rem; margin-top: 0.6rem;"><strong>Features:</strong></p>
+                  <ul style="padding: 0; margin: 0; list-style-position: inside; text-align: center;">
+                    <li style="margin-bottom: 4px;"><strong>Data Cleaning:</strong> Handles missing values and
+                      standardizes categorical fields (Make, Model, Location).</li>
+                    <li style="margin-bottom: 4px;"><strong>Log Transformations:</strong> Applies log smoothing to
+                      skewed variables like Price and Mileage to improve model stability.</li>
+                    <li style="margin-bottom: 4px;"><strong>Ratio Metrics:</strong> Calculates engineered features such
+                      as <code>price_per_km</code> and <code>price_to_fair_ratio</code> to capture relative value.</li>
+                    <li style="margin-bottom: 4px;"><strong>Group Statistics:</strong> Computes aggregated mean price
+                      and value benchmarks grouped by Make, Model, and Location.</li>
+                    <li style="margin-bottom: 4px;"><strong>XGBoost Modeling:</strong> Implements Extreme Gradient
+                      Boosting with hyperparameter grid search and cross-validation.</li>
+                    <li style="margin-bottom: 4px;"><strong>Random Forest:</strong> Uses a Random Forest model to
+                      capture non-linear relationships as a complementary predictor.</li>
+                    <li><strong>Ensemble Strategy:</strong> Blends predictions from XGBoost and Random Forest using
+                      optimized weights (alphas) for maximum accuracy.</li>
                   </ul>
-                  <p class="proj-notes">Signals forecasting + investor-friendly dashboards.</p>
                 </div>
               </div>
             </div>
-
-            <div class="video-card">
-              <div class="video-aspect">
-                <iframe
-                  src="https://www.youtube.com/embed/VIDEO_ID_3?rel=0"
-                  title="FinModel demo"
-                  loading="lazy" allowfullscreen
-                  referrerpolicy="strict-origin-when-cross-origin"></iframe>
-              </div>
-              <div class="video-caption">Demo: FinModel</div>
+          </div>
+          <!-- <div class="video-card">
+            <div class="video-aspect">
+              <iframe src="https://www.youtube.com/embed/VIDEO_ID_3?rel=0" title="Car Deal Predictor Demo"
+                loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
             </div>
-          </article>
-        </main>
-      </div>
-    </section>
+            <div class="video-caption">Demo: Car Deal Predictor</div>
+          </div> -->
+        </article>
+      </main>
+    </div>
+  </section>
 
-    <!-- ===== CONTACT ===== -->
-    <section class="contact" id="contact" aria-label="Contact">
-      <div class="container contact-wrap">
-        <h2 class="section-bubble section-center">Contact Me</h2>
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact" aria-label="Contact">
+    <div class="container contact-wrap">
+      <h2 class="section-bubble section-center">Contact Me</h2>
 
-        <form class="glass-form" action="#" method="POST" novalidate>
-          <div class="field">
-            <label for="fullName">Full Name</label>
-            <input id="fullName" name="fullName" type="text" placeholder="Your name" required />
-          </div>
+      <!-- 
+        To make this form functional, sign up at https://formspree.io
+        Create a new form and replace "YOUR_FORM_ID" below with your unique form ID.
+      -->
+      <form class="glass-form" id="contact-form" action="https://formspree.io/f/xrekjgzr" method="POST">
+        <div class="field">
+          <label for="fullName">Full Name</label>
+          <input id="fullName" name="fullName" type="text" placeholder="Your name" required />
+        </div>
 
-          <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="you@example.com" required />
-          </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+        </div>
 
-          <div class="field field--span">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" placeholder="Tell me about your project or question…" required></textarea>
-          </div>
+        <div class="field field--span">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="How can I help you?" required></textarea>
+        </div>
 
-          <div class="actions">
-            <button class="btn-send" type="submit">Send</button>
-          </div>
-        </form>
-      </div>
-    </section>
+      </form>
+      <button type="submit" class="submit-btn" style="min-width: 140px;" form="contact-form">Send Message</button>
+      <p id="form-status"></p>
+    </div>
+  </section>
 
-    <!-- Placeholder -->
-    <section id="experience" class="spacer"></section>
+  <!-- Placeholder -->
+  <section id="experience" class="spacer"></section>
 
-    <footer class="foot">
-      <span>© <span id="year"></span> Ayaan Faisal</span>
-      <span class="sep">•</span>
-      <span class="hint">Scroll for more</span>
-    </footer>
+  <footer class="foot">
+    <span>© <span id="year"></span> Ayaan Faisal</span>
+    <span class="sep">•</span>
+    <span class="hint">Scroll for more</span>
+  </footer>
 
-    <script src="main.js" type="module"></script>
-  </body>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>

@@ -7,7 +7,7 @@ const WEB_TARGET_OPACITY = 0.58;
 
 /* Web interaction */
 let CURSOR_INFLUENCE = 370;
-let CURSOR_DECAY_MS  = 200;
+let CURSOR_DECAY_MS = 200;
 
 /* Particle motion */
 let DAMPING = 0.999;
@@ -64,45 +64,45 @@ function size() {
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   w = vw; h = vh;
 }
-function rand(min, max){ return Math.random() * (max - min) + min; }
-function initParticles(){
-  const count = Math.round(Math.min(180, Math.max(100, (w*h)/17000)));
+function rand(min, max) { return Math.random() * (max - min) + min; }
+function initParticles() {
+  const count = Math.round(Math.min(180, Math.max(100, (w * h) / 17000)));
   particles = Array.from({ length: count }, () => ({
     x: rand(0, w), y: rand(0, h),
     vx: rand(-0.06, 0.06), vy: rand(-0.06, 0.06),
     r: rand(0.8, 2.1)
   }));
 }
-function step(t){
+function step(t) {
   ctx.clearRect(0, 0, w, h);
 
   // cursor decay
   let cf = 0;
-  if (cursor.active){
+  if (cursor.active) {
     const dt = Math.max(0, t - cursor.t);
     cf = Math.max(0, 1 - dt / CURSOR_DECAY_MS);
     if (cf === 0) cursor.active = false;
   }
 
   // links
-  const linkDist = Math.min(MAX_LINK_DIST, Math.max(MIN_LINK_DIST, Math.sqrt(w*h)/LINK_DIST_SCALE));
-  for (let i=0;i<particles.length;i++){
+  const linkDist = Math.min(MAX_LINK_DIST, Math.max(MIN_LINK_DIST, Math.sqrt(w * h) / LINK_DIST_SCALE));
+  for (let i = 0; i < particles.length; i++) {
     const p = particles[i];
-    for (let j=i+1;j<particles.length;j++){
+    for (let j = i + 1; j < particles.length; j++) {
       const q = particles[j];
       const dx = p.x - q.x, dy = p.y - q.y;
-      const d2 = dx*dx + dy*dy;
-      if (d2 < linkDist*linkDist){
-        let a = 0.28 * (1 - Math.sqrt(d2)/linkDist);
-        if (cf > 0){
+      const d2 = dx * dx + dy * dy;
+      if (d2 < linkDist * linkDist) {
+        let a = 0.28 * (1 - Math.sqrt(d2) / linkDist);
+        if (cf > 0) {
           const mx = (p.x + q.x) * 0.5, my = (p.y + q.y) * 0.5;
           const cd = Math.hypot(mx - cursor.x, my - cursor.y);
-          if (cd < CURSOR_INFLUENCE){
+          if (cd < CURSOR_INFLUENCE) {
             const boost = (1 - cd / CURSOR_INFLUENCE) * cf;
             a *= (1 + 1.4 * boost);
           }
         }
-        if (a > 0.01){
+        if (a > 0.01) {
           ctx.strokeStyle = `rgba(200,200,210,${a})`;
           ctx.lineWidth = 1;
           ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke();
@@ -112,13 +112,13 @@ function step(t){
   }
 
   // dots + motion
-  for (let k=0;k<particles.length;k++){
+  for (let k = 0; k < particles.length; k++) {
     const s = particles[k];
 
-    if (cf > 0){
+    if (cf > 0) {
       const dx2 = cursor.x - s.x, dy2 = cursor.y - s.y;
       const dist = Math.hypot(dx2, dy2);
-      if (dist < CURSOR_INFLUENCE){
+      if (dist < CURSOR_INFLUENCE) {
         const pull = (1 - dist / CURSOR_INFLUENCE) * 0.02 * cf;
         const inv = 1 / (dist + 0.001);
         s.vx += dx2 * inv * pull;
@@ -127,7 +127,7 @@ function step(t){
     }
 
     ctx.fillStyle = 'rgba(235,235,245,0.95)';
-    ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI*2); ctx.fill();
+    ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2); ctx.fill();
 
     s.x += s.vx; s.y += s.vy;
     s.vx *= DAMPING; s.vy *= DAMPING;
@@ -138,7 +138,7 @@ function step(t){
 
   raf = requestAnimationFrame(step);
 }
-function startWeb(){
+function startWeb() {
   size(); initParticles();
   if (raf) cancelAnimationFrame(raf);
   raf = requestAnimationFrame(step);
@@ -216,14 +216,14 @@ requestAnimationFrame(() => requestAnimationFrame(revealWeb));
   const io = new IntersectionObserver((entries) => {
     const now = performance.now();
     entries.forEach(ent => {
-      if (ent.isIntersecting && ent.intersectionRatio > 0.55){
+      if (ent.isIntersecting && ent.intersectionRatio > 0.55) {
         bubble.classList.add('in');
         grid.classList.add('in'); // triggers chip stagger
-        if (now - cooldown > COOL_MS){
+        if (now - cooldown > COOL_MS) {
           runShine();
           cooldown = now;
         }
-      } else if (!ent.isIntersecting){
+      } else if (!ent.isIntersecting) {
         bubble.classList.remove('in');
         grid.classList.remove('in'); // allow re-run
       }
@@ -234,4 +234,49 @@ requestAnimationFrame(() => requestAnimationFrame(revealWeb));
 })();
 
 /* ===== Flip-card interactions — hover handles flipping now ===== */
-(function setupFlips(){ /* no-op */ })();
+(function setupFlips() { /* no-op */ })();
+
+/* ===== Contact Form AJAX ===== */
+(function setupContactForm() {
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
+  if (!form || !status) return;
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    const data = new FormData(event.target);
+
+    // Clear previous status
+    status.textContent = "Sending...";
+    status.className = "";
+
+    try {
+      const response = await fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        status.textContent = "Message sent!";
+        status.classList.add("success");
+        form.reset();
+      } else {
+        const result = await response.json();
+        if (Object.hasOwn(result, 'errors')) {
+          status.textContent = result["errors"].map(error => error["message"]).join(", ");
+        } else {
+          status.textContent = "Oops! There was a problem submitting your form.";
+        }
+        status.classList.add("error");
+      }
+    } catch (error) {
+      status.textContent = "Oops! There was a problem submitting your form.";
+      status.classList.add("error");
+    }
+  }
+
+  form.addEventListener("submit", handleSubmit);
+})();

@@ -1,7 +1,7 @@
 /* ---------- Palette ---------- */
 :root {
-  --bg: rgb(74, 74, 74);
-  --bg-2: rgb(0, 0, 0);
+  --bg: rgb(0, 0, 0);
+  --bg-2: rgb(91, 91, 91);
   --silver: #c9c9cc;
   --silver-soft: #a7a7ac;
   --accent: #d0d2d6;

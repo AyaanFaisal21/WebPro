@@ -103,7 +103,7 @@ function step(t) {
           }
         }
         if (a > 0.01) {
-          ctx.strokeStyle = `rgba(250,0,0,${a})`;
+          ctx.strokeStyle = `rgba(250,1,0,${a})`;
           ctx.lineWidth = 1;
           ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke();
         }

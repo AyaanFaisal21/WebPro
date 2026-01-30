@@ -216,7 +216,7 @@ requestAnimationFrame(() => requestAnimationFrame(revealWeb));
   const io = new IntersectionObserver((entries) => {
     const now = performance.now();
     entries.forEach(ent => {
-      if (ent.isIntersecting && ent.intersectionRatio > 0.55) {
+      if (ent.isIntersecting && ent.intersectionRatio > 0.15) {
         bubble.classList.add('in');
         grid.classList.add('in'); // triggers chip stagger
         if (now - cooldown > COOL_MS) {
@@ -228,13 +228,22 @@ requestAnimationFrame(() => requestAnimationFrame(revealWeb));
         grid.classList.remove('in'); // allow re-run
       }
     });
-  }, { threshold: [0, 0.55, 0.9] });
+  }, { threshold: [0, 0.15, 0.9] });
 
   io.observe(bubble);
 })();
 
-/* ===== Flip-card interactions — hover handles flipping now ===== */
-(function setupFlips() { /* no-op */ })();
+/* ===== Flip-card interactions — tap/click to flip on mobile ===== */
+(function setupFlips() {
+  const cards = document.querySelectorAll('.flip-card');
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      card.classList.toggle('flipped');
+    });
+    // Optional: remove flip if clicking outside? 
+    // For now, simple toggle is best for UX.
+  });
+})();
 
 /* ===== Contact Form AJAX ===== */
 (function setupContactForm() {

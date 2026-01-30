@@ -738,6 +738,14 @@ body::after {
     0 0 26px var(--red-glow-2);
 }
 
+.hero-bubble {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  padding: .8rem 1.8rem;
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+}
+
 .section-center {
   margin-inline: auto;
 }
@@ -784,8 +792,30 @@ body::after {
   border-radius: var(--card-radius);
 }
 
-.flip-card:hover .flip-inner {
+.flip-card:hover .flip-inner,
+.flip-card.flipped .flip-inner {
   transform: rotateY(180deg);
+}
+
+/* Mobile Header Adjustment */
+@media (max-width: 600px) {
+  .brand-link {
+    display: none;
+    /* Hide brand to save space */
+  }
+
+  .glass-header {
+    grid-template-columns: 1fr;
+    /* Centered nav */
+    justify-items: center;
+    width: min(1400px, 94vw);
+    /* Slightly wider on mobile */
+  }
+
+  .site-nav {
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 .flip-face {

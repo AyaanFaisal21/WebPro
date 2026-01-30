@@ -103,7 +103,7 @@ function step(t) {
           }
         }
         if (a > 0.01) {
-          ctx.strokeStyle = `rgba(200,200,210,${a})`;
+          ctx.strokeStyle = `rgba(250,0,0,${a})`;
           ctx.lineWidth = 1;
           ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke();
         }
@@ -126,7 +126,7 @@ function step(t) {
       }
     }
 
-    ctx.fillStyle = 'rgba(235,235,245,0.95)';
+    ctx.fillStyle = 'rgba(255, 0, 0, 0.95)';
     ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2); ctx.fill();
 
     s.x += s.vx; s.y += s.vy;
